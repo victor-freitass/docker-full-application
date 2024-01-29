@@ -1,0 +1,60 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    background-color: #2e3558;
+    border-bottom: 5px solid #101638;
+}
+
+header h1 .docker  {
+    position: relative;
+    top: 5px;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    background-color: #161d41;
+    min-height: 80vh;
+    border-bottom: 5px solid #101638;
+}
+
+button {
+    background-color: #04AA6D;
+    width: 60px;
+    height: 30px;
+}
+
+button:hover {
+    transition-duration: 0.4s;
+    background-color: #005536; 
+    color: white;
+}
+
+.div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 300px;
+    width: 300px;
+    background-color: #273580;
+    padding: 10px;
+    border: 5px solid #101638;
+} 
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 10vh;
+    background-color: #2e3558;
+}
