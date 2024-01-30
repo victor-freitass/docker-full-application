@@ -1,8 +1,13 @@
 # .env
-change 'env-exemple' to '.env' and set your preference config
+Change 'env-exemple' to '.env' and set your preference config
+
+Dockerfile ENV reference:
+- https://docs.docker.com/engine/reference/builder/#env 
+- https://www.baeldung.com/ops/dockerfile-env-variable 
 
 # RUN 
-- $ docker compose up -d
+$ docker compose build 
+$ docker compose up -d
 
 # Create database
 enter the postgres CLI: 
