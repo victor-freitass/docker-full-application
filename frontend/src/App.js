@@ -7,18 +7,10 @@ function App() {
   async function getUsers () {
     document.querySelector('#get').remove(); 
     
-    //n está conseguindo fazer o fetch. A api n quer subir. Erro no link...
-    const response = await fetch('http://localhost:3003/users'); //link node-container
-    console.log(response)
+    const response = await fetch('http://localhost:3003/users'); 
     const users = await response.json();
 
     const ul = document.querySelector('#list');
-
-    if (users === null) {
-      const li = document.createElement('li');
-      li.innerText = 'Não há usuários ainda';
-      return ul.appendChild(li);
-    }
     
     users.forEach(user => {
       const li = document.createElement('li');
