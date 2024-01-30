@@ -11,6 +11,10 @@ services:
     container_name: postgres-container
     networks:
       - full-application
+    environment:
+      POSTGRES_DB: docker
+      POSTGRES_USER: myname
+      POSTGRES_PASSWORD: mypassword
     healthcheck:
       test: ["CMD-SHELL", "pg_isready"]
       timeout: 5s
