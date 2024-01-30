@@ -10,6 +10,7 @@ app.use(urlencoded({extended: true}));
 
 app.get('/users', async (req, res) => {
     const users = (await client.query('SELECT * FROM users')).rows;
+    console.log(users);
     if (!users.length) {
         return res.send(null);
     }

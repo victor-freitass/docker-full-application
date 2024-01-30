@@ -3,10 +3,13 @@ import dotenv from 'dotenv';
 dotenv.config();
 
 const client = new pg.Pool({
-    host: 'database', 
-    user: 'postgres',
+    host: 'db', 
+    port: 5432,
+    user: 'myname', 
     password: 'mypassword', 
-    database: 'docker'
+    database: 'docker',
+    // ssl: false
 });
+
 
 export default client;

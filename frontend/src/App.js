@@ -8,7 +8,8 @@ function App() {
     document.querySelector('#get').remove(); 
     
     //n está conseguindo fazer o fetch. A api n quer subir. Erro no link...
-    const response = await fetch('node-container'); //link node-container
+    const response = await fetch('http://localhost:3003/users'); //link node-container
+    console.log(response)
     const users = await response.json();
 
     const ul = document.querySelector('#list');
