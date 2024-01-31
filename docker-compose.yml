@@ -6,25 +6,27 @@ networks:
 
 services:
   db: 
-    build: ./database
+    image: postgres
     restart: always
     container_name: postgres-container
     networks:
       - full-application
     environment:
-      POSTGRES_DB: docker
-      POSTGRES_USER: myname
-      POSTGRES_PASSWORD: mypassword
+      POSTGRES_USER: ${POSTGRES_USER}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+      POSTGRES_DB: ${POSTGRES_DB}
     healthcheck:
       test: ["CMD-SHELL", "pg_isready"]
-      timeout: 5s
+      interval: 10s
+      timeout: 20s
       retries: 5
+      start_period: 80s  
     volumes:
       - pgdata:/var/lib/postgresql/data
   api:
     depends_on:
       db:
-        condition: service_healthy
+        condition: service_started
     networks:
       - full-application
     build: 

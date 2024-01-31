@@ -1,7 +1,0 @@
-FROM postgres
-
-ENV POSTGRES_PASSWORD mypassword 
-ENV POSTGRES_USER myname  
-ENV POSTGRES_DB docker
-
-RUN env
