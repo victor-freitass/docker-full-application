@@ -1,22 +1,19 @@
 # .env
 Change 'env-exemple' to '.env' and set your preference config
 
-Dockerfile ENV reference:
+# Dockerfile environment variables reference:
 - https://docs.docker.com/engine/reference/builder/#env 
 - https://www.baeldung.com/ops/dockerfile-env-variable 
 
 # RUN 
-$ docker compose build 
-$ docker compose up -d
+- $ docker compose up -d
 
-# Create database
-enter the postgres CLI: 
-- $ docker exec -it postgres-container psql -Umyname
-- create database docker;
-- \c docker
-- create table users (name varchar(255), email varchar(255));
+# Create table
+Postgres CLI in container:
+- $ docker exec -it project-compose-db-1 psql -Umyname docker
+- $ create table users (name text, email text);
 
-# Acess
+# Use de project
 - http://localhost:3000/
 
 # More informations
