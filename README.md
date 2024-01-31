@@ -1,7 +1,7 @@
-# .env
-Change 'env-exemple' to '.env' and set your preference config
+# Environment variables
+Change each 'env_file' to '.env'
 
-# Dockerfile environment variables reference:
+# Environment variables references to learn:
 - https://docs.docker.com/engine/reference/builder/#env 
 - https://www.baeldung.com/ops/dockerfile-env-variable 
 
