@@ -5,18 +5,19 @@ import Form from './components/Form';
 function App() {
  
   async function getUsers () {
-    document.querySelector('#get').remove(); 
-    
     const response = await fetch('http://localhost:3003/users'); 
     const users = await response.json();
-
-    const ul = document.querySelector('#list');
     
-    users.forEach(user => {
-      const li = document.createElement('li');
-      li.innerText = `${user.name} | ${user.email}`; 
-      ul.appendChild(li);
-    });
+    if (users.length) {
+      document.querySelector('#get').remove(); 
+      const ul = document.querySelector('#list');
+      
+      users.forEach(user => {
+        const li = document.createElement('li');
+        li.innerText = `${user.name} | ${user.email}`; 
+        ul.appendChild(li);
+      });
+    }
   }
 
   return (
